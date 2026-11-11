@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Invitación digital a los XV años de Valentina Sofía — 22 de Noviembre 2025">
+    <meta name="theme-color" content="#0d0811">
+    <title>Mis XV Años — Valentina Sofía ✨</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         ATMOSPHERIC LAYERS (fixed, behind everything)
+         ============================================================ -->
+    <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
+    <div class="particles-container" id="particlesContainer" aria-hidden="true"></div>
+    <div class="lanterns-container" id="lanternsContainer" aria-hidden="true"></div>
+
+
+    <!-- ============================================================
+         INVITATION OVERLAY (Envelope Open Screen)
+         ============================================================ -->
+    <div class="invitation-overlay" id="invitationOverlay">
+        <div class="envelope-icon" aria-hidden="true">💌</div>
+        <p class="font-cursive" style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 5px;">
+            Estás invitado/a
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px; max-width: 280px; text-align: center;">
+            A la celebración de XV años de<br>
+            <span class="font-cursive" style="font-size: 1.5rem;">Valentina Sofía</span>
+        </p>
+        <button class="btn btn--solid btn-glow cover-btn-enter" id="btnOpenInvitation">
+            ✨ Abrir Invitación
+        </button>
+    </div>
+
+
+    <!-- ============================================================
+         SECCIÓN 1: PORTADA / COVER / HERO
+         ============================================================ -->
+    <section class="section cover" id="portada">
+        <div class="section__bg section__bg--gradient" data-parallax="0.2"></div>
+
+        <div class="section__content">
+            <p class="cover__quote cover-enter">
+                "Una noche mágica está por comenzar..."
+            </p>
+
+            <div class="divider" style="margin: 20px auto;"></div>
+
+            <p class="cover__label cover-fade-in">Mis XV Años</p>
+
+            <h1 class="cover__name cover-title-enter shimmer">
+                Valentina Sofía
+            </h1>
+
+            <p class="cover__date cover-fade-in">
+                22 de Noviembre, 2025
+            </p>
+
+            <div class="divider--ornament" style="margin: 20px auto;">
+                ✦ ✧ ✦
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator cover-fade-in" style="animation-delay: 2.5s;">
+            <div class="scroll-indicator__mouse">
+                <div class="scroll-indicator__wheel"></div>
+            </div>
+            <span class="scroll-indicator__text">Desliza</span>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 2: CUENTA REGRESIVA
+         ============================================================ -->
+    <section class="section section--short countdown" id="cuentaRegresiva">
+        <div class="section__content">
+            <h2 class="section__title reveal">Faltan...</h2>
+            <div class="divider reveal reveal-delay-1"></div>
+
+            <div class="countdown-row reveal reveal-delay-2">
+                <div class="countdown-item">
+                    <span class="countdown-number pulse-glow" id="days">--</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-number pulse-glow" id="hours">--</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-number pulse-glow" id="minutes">--</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-number pulse-glow" id="seconds">--</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 3: INFORMACIÓN DE PADRES
+         ============================================================ -->
+    <section class="section padres vine-border" id="padres">
+        <div class="section__content">
+            <span class="deco-icon float-gentle reveal">🕊️</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Con la bendición de</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+
+            <div class="padres__names reveal reveal-delay-3">
+                Carlos Eduardo Martínez
+                <span class="padres__ampersand">&</span>
+                María Alejandra López
+            </div>
+
+            <p class="padres__message reveal reveal-delay-4">
+                Tienen el honor de invitarle a la celebración de los XV años de su amada hija
+            </p>
+
+            <h3 class="padres__quincea shimmer reveal reveal-delay-5">
+                Valentina Sofía
+            </h3>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 4: CEREMONIA + RECEPCIÓN
+         ============================================================ -->
+    <section class="section evento" id="evento">
+        <div class="section__content" style="max-width: 760px;">
+            <span class="deco-icon float-gentle reveal">🏮</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Itinerario</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+
+            <div class="cards-row">
+                <!-- Ceremonia -->
+                <div class="card reveal-left reveal-delay-2">
+                    <span class="card__icon">⛪</span>
+                    <h3 class="card__title">Ceremonia Religiosa</h3>
+                    <p class="card__time">5:00 PM</p>
+                    <p class="card__text">
+                        Parroquia Nuestra Señora del Carmen
+                    </p>
+                    <p class="card__text" style="font-size: 0.82rem; opacity: 0.7;">
+                        Calle 45 #12-30, Centro Histórico
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--sm">
+                            📍 Google Maps
+                        </a>
+                        <a href="https://waze.com/ul" target="_blank" rel="noopener" class="btn btn--sm">
+                            🗺️ Waze
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recepción -->
+                <div class="card reveal-right reveal-delay-3">
+                    <span class="card__icon">🎉</span>
+                    <h3 class="card__title">Recepción</h3>
+                    <p class="card__time">7:30 PM</p>
+                    <p class="card__text">
+                        Salón Imperial de Eventos
+                    </p>
+                    <p class="card__text" style="font-size: 0.82rem; opacity: 0.7;">
+                        Av. Libertador 230, Zona Norte
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--sm">
+                            📍 Google Maps
+                        </a>
+                        <a href="https://waze.com/ul" target="_blank" rel="noopener" class="btn btn--sm">
+                            🗺️ Waze
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 5: GALERÍA DE FOTOS
+         ============================================================ -->
+    <section class="section galeria" id="galeria">
+        <div class="section__content" style="max-width: 550px;">
+            <span class="deco-icon float-gentle reveal">📸</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Galería</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+            <p class="section__text reveal reveal-delay-2">Mis fotos de sesión de XV años</p>
+
+            <!-- Carousel -->
+            <div class="gallery-carousel reveal-scale reveal-delay-3">
+                <div class="gallery-track" id="galleryTrack">
+                    <div class="gallery-slide">
+                        <div class="gallery-img-wrapper" style="width: 100%; height: 100%;">
+                            <img src="assets/images/photo-1.jpg" alt="Sesión XV Años - Linternas Mágicas" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-img-wrapper" style="width: 100%; height: 100%;">
+                            <img src="assets/images/photo-2.jpg" alt="Sesión XV Años - Noche de Ensueño" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-img-wrapper" style="width: 100%; height: 100%;">
+                            <img src="assets/images/photo-3.jpg" alt="Sesión XV Años - Vestido de Gala" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-img-wrapper" style="width: 100%; height: 100%;">
+                            <img src="assets/images/photo-4.jpg" alt="Sesión XV Años - Celebración y Magia" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-img-wrapper" style="width: 100%; height: 100%;">
+                            <img src="assets/images/photo-5.jpg" alt="Sesión XV Años - Ilusión y Fantasía" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-img-wrapper" style="width: 100%; height: 100%;">
+                            <img src="assets/images/photo-6.jpg" alt="Sesión XV Años - Brindis y Alegría" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <button class="gallery-nav gallery-nav--prev" id="galleryPrev" aria-label="Foto anterior">‹</button>
+                <button class="gallery-nav gallery-nav--next" id="galleryNext" aria-label="Siguiente foto">›</button>
+            </div>
+
+            <!-- Dots -->
+            <div class="gallery-dots" id="galleryDots"></div>
+
+            <!-- Thumbnails -->
+            <div class="gallery-thumbs" id="galleryThumbs">
+                <div class="gallery-thumb active"><img src="assets/images/photo-1.jpg" alt="Miniatura 1"></div>
+                <div class="gallery-thumb"><img src="assets/images/photo-2.jpg" alt="Miniatura 2"></div>
+                <div class="gallery-thumb"><img src="assets/images/photo-3.jpg" alt="Miniatura 3"></div>
+                <div class="gallery-thumb"><img src="assets/images/photo-4.jpg" alt="Miniatura 4"></div>
+                <div class="gallery-thumb"><img src="assets/images/photo-5.jpg" alt="Miniatura 5"></div>
+                <div class="gallery-thumb"><img src="assets/images/photo-6.jpg" alt="Miniatura 6"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 6: CÓDIGO DE VESTIMENTA
+         ============================================================ -->
+    <section class="section section--short dresscode" id="dresscode">
+        <div class="section__content">
+            <span class="deco-icon float-gentle reveal">👗</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Código de Vestimenta</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+
+            <p class="section__subtitle reveal reveal-delay-2">Formal / Elegante</p>
+
+            <p class="section__text reveal reveal-delay-3">
+                Te sugerimos vestir con los siguientes tonos para armonizar con la celebración
+            </p>
+
+            <div class="dress-palette reveal reveal-delay-3">
+                <div class="dress-swatch">
+                    <div class="dress-swatch__color" style="background: #6a0dad;"></div>
+                    <span class="dress-swatch__label">Morado</span>
+                </div>
+                <div class="dress-swatch">
+                    <div class="dress-swatch__color" style="background: #d4af37;"></div>
+                    <span class="dress-swatch__label">Dorado</span>
+                </div>
+                <div class="dress-swatch">
+                    <div class="dress-swatch__color" style="background: #e6e6fa;"></div>
+                    <span class="dress-swatch__label">Lavanda</span>
+                </div>
+                <div class="dress-swatch">
+                    <div class="dress-swatch__color" style="background: #2c2c54;"></div>
+                    <span class="dress-swatch__label">Azul noche</span>
+                </div>
+                <div class="dress-swatch">
+                    <div class="dress-swatch__color" style="background: #c9a0dc;"></div>
+                    <span class="dress-swatch__label">Lila</span>
+                </div>
+            </div>
+
+            <p class="dress-note reveal reveal-delay-4">
+                ✦ Evitar el color blanco, reservado para la quinceañera ✦
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 7: MESA DE REGALOS
+         ============================================================ -->
+    <section class="section section--short regalos" id="regalos">
+        <div class="section__content" style="max-width: 760px;">
+            <span class="deco-icon float-gentle reveal">🎁</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Mesa de Regalos</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+
+            <p class="section__text reveal reveal-delay-2">
+                Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle
+            </p>
+
+            <div class="cards-row">
+                <div class="card card--featured reveal-scale reveal-delay-3">
+                    <span class="card__icon">💌</span>
+                    <h3 class="card__title">Lluvia de Sobres</h3>
+                    <p class="card__text" style="font-size: 0.95rem; line-height: 1.8;">
+                        Tu presencia, cariño y bendición son nuestro mayor regalo en este día tan soñado.<br>
+                        Si deseas tener una atención o detalle especial con la quinceañera, dispondremos de un cofre especial de sobres el día de la celebración.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 8: RSVP — FORMULARIO + WHATSAPP
+         ============================================================ -->
+    <section class="section rsvp" id="rsvp">
+        <div class="section__content">
+            <span class="deco-icon float-gentle reveal">📩</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Confirma tu Asistencia</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+
+            <p class="section__text reveal reveal-delay-2">
+                Tu confirmación es muy importante para nosotros
+            </p>
+
+            <!-- Formulario -->
+            <form class="rsvp-form reveal reveal-delay-3" id="rsvpForm">
+                <div class="form-group">
+                    <label for="rsvpName">Nombre</label>
+                    <input type="text" id="rsvpName" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rsvpAttend">Asistencia</label>
+                    <select id="rsvpAttend" name="asistencia" required>
+                        <option value="" disabled selected>¿Asistirás?</option>
+                        <option value="si">Sí, confirmo mi asistencia</option>
+                        <option value="no">No podré asistir</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rsvpPasses">Pases</label>
+                    <select id="rsvpPasses" name="pases">
+                        <option value="" disabled selected>Número de pases</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rsvpDiet">Restricciones (opcional)</label>
+                    <textarea id="rsvpDiet" name="restricciones" placeholder="Restricciones alimenticias, alergias..." rows="2"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn--solid btn-glow">
+                    ✨ Confirmar Asistencia
+                </button>
+            </form>
+
+            <!-- Success message -->
+            <div class="success-message" id="rsvpSuccess">
+                <span style="font-size: 2rem;">🎉</span>
+                <p class="font-cursive" style="font-size: 1.8rem; margin: 8px 0;">¡Gracias!</p>
+                <p class="section__text">Tu confirmación ha sido registrada. ¡Te esperamos con mucha emoción!</p>
+            </div>
+
+            <p class="rsvp-divider reveal reveal-delay-4">— o confirma directamente por WhatsApp —</p>
+
+            <a href="#" id="whatsappBtn" target="_blank" rel="noopener"
+               class="btn btn--whatsapp btn-glow reveal reveal-delay-5">
+                💬 Confirmar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 9: PLAYLIST SPOTIFY
+         ============================================================ -->
+    <section class="section section--short playlist" id="playlist">
+        <div class="section__content">
+            <span class="deco-icon float-gentle reveal">🎶</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Playlist de la Fiesta</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+
+            <p class="section__text reveal reveal-delay-2">
+                ¡Agrega las canciones que quieres escuchar en la fiesta para que la noche sea inolvidable!
+            </p>
+
+            <a href="https://open.spotify.com" target="_blank" rel="noopener"
+               class="btn btn--spotify btn-glow reveal reveal-delay-3" style="margin-top: 18px;">
+                🎵 Abrir Playlist en Spotify
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 10: MURO DE DESEOS
+         ============================================================ -->
+    <section class="section deseos" id="deseos">
+        <div class="section__content">
+            <span class="deco-icon float-gentle reveal">💝</span>
+
+            <h2 class="section__title reveal reveal-delay-1">Muro de Deseos</h2>
+            <div class="divider reveal reveal-delay-2"></div>
+
+            <p class="section__text reveal reveal-delay-2">
+                Deja tu dedicatoria o mensaje especial para Valentina Sofía
+            </p>
+
+            <form class="rsvp-form reveal reveal-delay-3" id="wishesForm"
+                  onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('wishSuccess').classList.add('show');">
+                <div class="form-group">
+                    <label for="wishName">Tu nombre</label>
+                    <input type="text" id="wishName" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="wishMessage">Tu mensaje</label>
+                    <textarea id="wishMessage" placeholder="Escribe tu mensaje o dedicatoria..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--solid btn-glow">
+                    Enviar Deseo ✨
+                </button>
+            </form>
+
+            <div class="success-message" id="wishSuccess">
+                <span style="font-size: 2rem;">💫</span>
+                <p class="font-cursive" style="font-size: 1.8rem; margin: 8px 0;">¡Hermoso!</p>
+                <p class="section__text">Tu deseo ha sido registrado. ¡Gracias por tus palabras!</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECCIÓN 11: FOOTER
+         ============================================================ -->
+    <footer class="footer" id="footer">
+        <p class="footer__goodbye reveal shimmer">¡Te esperamos!</p>
+
+        <p class="footer__lanterns reveal reveal-delay-1" aria-hidden="true">
+            🏮 🏮 🏮
+        </p>
+
+        <div class="divider reveal reveal-delay-2"></div>
+
+        <p class="footer__family reveal reveal-delay-3">
+            Con todo nuestro amor,<br>
+            <span class="font-serif">La familia Martínez López</span>
+        </p>
+
+        <p class="footer__credit reveal reveal-delay-4">
+            Invitación Digital ✦ Inspirada en Rapunzel 🏮
+        </p>
+    </footer>
+
+
+    <!-- ============================================================
+         MUSIC TOGGLE BUTTON (Fixed)
+         ============================================================ -->
+    <button class="music-toggle" id="musicToggle" aria-label="Reproducir o pausar música">
+        <div class="music-bars">
+            <span class="music-bar"></span>
+            <span class="music-bar"></span>
+            <span class="music-bar"></span>
+            <span class="music-bar"></span>
+        </div>
+    </button>
+
+
+    <!-- ============================================================
+         AUDIO (Background Music)
+         ============================================================ -->
+    <audio id="bgMusic" preload="auto" loop>
+        <!--
+            Para agregar música, descomenta una de estas opciones:
+            <source src="assets/audio/music.mp3" type="audio/mpeg">
+            O usa una URL directa a un archivo de audio libre de derechos.
+        -->
+    </audio>
+
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+
+</body>
+</html>
