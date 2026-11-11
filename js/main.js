@@ -9,14 +9,14 @@
 
     // ——— CONFIG ———
     const CONFIG = {
-        eventDate: '2025-11-22T17:00:00',
+        eventDate: '2026-11-14T20:00:00',
         lanternCount: 14,
         starCount: 80,
         particleCount: 25,
         revealThreshold: 0.15,
         parallaxSpeed: 0.3,
-        whatsappNumber: '573001234567',
-        whatsappMessage: '¡Hola! Confirmo mi asistencia a los XV de Valentina Sofía. Soy [Tu nombre] y asistiré con [Número] pases.'
+        whatsappNumber: '573133972380',
+        whatsappMessage: '¡Hola! Confirmo mi asistencia a los XV de Givana Naiad. Soy [Tu nombre] y asistiré con [Número] pases.'
     };
 
     // ——— DOM READY ———
